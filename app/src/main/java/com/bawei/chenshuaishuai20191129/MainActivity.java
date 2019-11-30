@@ -84,8 +84,6 @@ public class MainActivity extends AppCompatActivity {
     private void init() {
         viewPager = (ViewPager) findViewById(R.id.viewpager);
         radioGroup = (RadioGroup) findViewById(R.id.radiogroup);
-
-
     }
     public  void jump(){
         viewPager.setCurrentItem(2);
