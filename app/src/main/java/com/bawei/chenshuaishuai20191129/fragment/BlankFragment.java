@@ -37,11 +37,12 @@ public class BlankFragment extends Fragment {
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
         init();
-        NetUtil.getInstance().getjson("http://blog.zhaoliang5156.cn/api/news/lawyer", new NetUtil.MyCallBack() {
+        NetUtil.getInstance().getjson("http://blog.zhaoliang5156.cn/api/pengpainews/pengpai1.json", new NetUtil.MyCallBack() {
             @Override
             public void getjson(String json) {
                 Bean bean = new Gson().fromJson(json, Bean.class);
                 List<Bean.ListdataBean> listdata = bean.getListdata();
+
                 listView.setAdapter(new Adapter(listdata));
             }
         });

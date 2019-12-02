@@ -38,7 +38,7 @@ public class Adapter extends BaseAdapter {
         wo.im=convertView.findViewById(R.id.mi);
         wo.text_1=convertView.findViewById(R.id.text_1);
         convertView.setTag(wo);
-        NetUtil.getInstance().getphoto(list.get(position).getAvatar(),wo.im);
+        NetUtil.getInstance().getphoto(list.get(position).getImageurl(),wo.im);
         wo.text_1.setText(list.get(position).getContent());
         return convertView;
     }
